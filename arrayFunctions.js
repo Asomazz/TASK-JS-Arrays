@@ -9,8 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  if (numbers.length % 2 == 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
+
+console.log(isArrayLengthOdd([2, 2, 2]));
 
 /**
  * isArrayLengthEven(numbers):
@@ -23,8 +29,14 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  if (numbers.length % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+console.log(isArrayLengthEven([2, 2, 2]));
 
 /**
  * addLailaToArray(instructors):
@@ -35,8 +47,11 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors.push("Laila");
+  return instructors;
 }
+
+console.log(addLailaToArray(["fahad", "mohammed"]));
 
 /**
  * eliminateTeam(teams):
@@ -47,8 +62,13 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  const last = teams[teams.length - 1];
+  teams.pop();
+  return last;
 }
+
+console.log(eliminateTeam(["fahad", "mohammed"]));
+/* i can use return teams.pop()*/
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -61,9 +81,14 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  if (fruits.length % 2 == 0) {
+    let x = fruits.length / 2;
+    return fruits.slice(x, fruits.length);
+  } else {
+    return [];
+  }
 }
-
+console.log(secondHalfOfArrayIfItIsEven([1, 4, 3]));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -78,6 +103,17 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use number method .indexOf()
  * - Use string method .slice()
  */
+
 function youGottaCalmDown(shout) {
-  // Your code here
+  let x = shout.indexOf("!");
+  console.log(x);
+  if (x != -1) {
+    shout = shout.slice(0, x + 1);
+  }
+
+  return shout;
 }
+
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
