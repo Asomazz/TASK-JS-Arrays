@@ -88,7 +88,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
     return [];
   }
 }
-console.log(secondHalfOfArrayIfItIsEven([1, 4, 3]));
+console.log(secondHalfOfArrayIfItIsEven([1, 4, 7, 6, 8, 9, 10, 3]));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -106,7 +106,6 @@ console.log(secondHalfOfArrayIfItIsEven([1, 4, 3]));
 
 function youGottaCalmDown(shout) {
   let x = shout.indexOf("!");
-  console.log(x);
   if (x != -1) {
     shout = shout.slice(0, x + 1);
   }
